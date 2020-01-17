@@ -3,11 +3,7 @@ import Axios from 'axios';
 
 
 const ApiCallGlobalFun = Axios.create({
-    // baseURL: 'http://jsonplaceholder.typicode.com/',
     baseURL: 'https://api.myjson.com/',
-    // headers: {
-    //      'X-Requested-With': 'jdfkljfldksjf'
-    // }
 });
 
 
@@ -25,9 +21,6 @@ class ProductCompenent extends Component {
         ApiCallGlobalFun({
             method: 'GET',
             url: 'bins/qhnfp',
-            // headers: {
-            //     'X-Get': 'This is My FisrtHeader'
-            // }
         }).then(response => {
             let items = response.data;
             console.log("items", items);
@@ -41,22 +34,43 @@ class ProductCompenent extends Component {
         });
 
     }
+    addToCart(id,name,price){
+        console.log(id,name,price);
+    }
 
 
     render() {
         return (
             <>
+            <h6>All Items</h6>
                 {this.state.items.map((values, index) => {
                     console.log(values);
                     return (
-                        <div >
-                            <div className="card">
-                                <img src={values.img_url} alt="Smiley face" height="42" width="42" /><br />
-                                <p>{values.name}</p><br />
-                                <p className="price" align="left" ><span>&#36;</span> <strike>{values.price} </strike>  <span>&#36;</span> {values.price - values.discount}</p>
-                                <p><button>Add to Cart</button></p>
+                        <div className="product-tile" key={values.id}>
+                            <div className="block-upper">
+                                <div className="discount">{values.discount}% off</div>
+                                <div className="cover"><img src={values.img_url} alt="Book Cover Not Available"/>  </div>
+                            </div>
+                            <div className="block-lower">
+                                <div className="name">{values.name}</div>
+                                <span className="strike">
+                                    <span className="list-price">{values.price}</span>
+                                </span>
+                                <span className="discounted-price"> {values.price - values.discount}</span>
+                                <div className="actions">
+                                    <button className="add-to-cart" onClick={() =>  this.addToCart(values.id, values.name,values.price)}>Add to cart</button>
+                                </div>
                             </div>
                         </div>
+
+                        // <div >
+                        //     <div className="card">
+                        //         <img src={values.img_url} alt="Smiley face" height="42" width="42" /><br />
+                        //         <p>{values.name}</p><br />
+                        //         <p className="price" align="left" ><span>&#36;</span> <strike>{values.price} </strike>  <span>&#36;</span> {values.price - values.discount}</p>
+                        //         <p><button>Add to Cart</button></p>
+                        //     </div>
+                        // </div>
                     )
                 })}
 

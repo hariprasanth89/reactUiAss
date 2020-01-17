@@ -1,4 +1,4 @@
-table,th{
+/* table,th{
     border: 1px solid;
 }
 
@@ -30,4 +30,153 @@ table,th{
   
   .card button:hover {
     opacity: 0.7;
+  } */
+
+
+  .product-tile {
+    width: 180px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 10px;
+    font-family: sans-serif;
+  }
+  
+  .discount {
+    background: #3ccc00;
+    color: #fff;
+    padding: 4px;
+    font-size: 9px;
+    min-width: 20%;
+    max-width: 30%;
+  }
+  
+  .cover{
+    height: 100px;
+    background: #eee;
+    margin: 4px 0;
+  }
+  
+  .block-upper {
+    padding: 10px;
+  }
+  
+  .block-lower {
+    background: #eee;
+    padding: 4px;
+  }
+  
+  .name {
+    font-size: 12px;
+  }
+  
+  span.list-price {
+    font-size: 14px;
+    padding-right: 8px;
+    color: #000;
+  }
+  
+  span.strike {
+    text-decoration: line-through;
+    color: #ff2e2e;
+  }
+  
+  span.discounted-price {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  button.add-to-cart {
+    border: 1px solid #46adf1;
+    font-size: 12px;
+    color: #46adf1;
+    background: #fff;
+    cursor: pointer;
+    right: 0;
+  }
+  
+  .loader {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    background: #349e32;
+    font-family: sans-serif;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+  
+  .actions {
+    float: right;
+  }
+  
+  .products-header {
+    border-width: 2px 0;
+    border-style: solid;
+    border-color: #ccc;
+    padding: 5px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  span.message {
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    background: #00bd0e;
+    padding: 3px 6px;
+    margin-left: 20px;
+  }
+  
+  .cart-link{
+    float: right;
+  }
+  
+  span.cart-item-count {
+    position: relative;
+    top: -5px;
+    border: solid 1px #ccc;
+    padding: 1px 3px;
+    font-size: 11px;
+    border-radius: 30px;
+    margin-left: -4px;
+    z-index: 200;
+    box-shadow: 1px 1px #888888;
+  }
+  
+  .cart-wrapper {
+    font-family: sans-serif;
+    font-size: 14px;
+  }
+  table.cart-product-table{
+    width: 100%;
+  }
+  
+  table.cart-product-table th td:first-child {
+    width: 50%;
+  }
+  
+  table.cart-product-table th td:nth-child(2) {
+    width: 20%;
+  }
+  
+  table.cart-product-table th td:nth-child(3) {
+    width: 30%;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  tr.cart-item div {
+    display: inline;
+    margin: 4px;
+  }
+  
+  tr.cart-item button {
+    background: transparent;
+    border: none;
   }
