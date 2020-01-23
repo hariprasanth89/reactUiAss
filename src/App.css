@@ -158,6 +158,28 @@
   table.cart-product-table th td:first-child {
     width: 50%;
   }
+
+  table > tr {
+    vertical-align: middle;
+}
+th {
+  text-align: left;
+}
+
+tr.cart-item div {
+  display: inline;
+  margin: 4px;
+}
+
+tr.cart-item button {
+  background: transparent;
+  border: none;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
   
   table.cart-product-table th td:nth-child(2) {
     width: 20%;
@@ -176,7 +198,90 @@
     margin: 4px;
   }
   
-  tr.cart-item button {
-    background: transparent;
-    border: none;
-  }
+
+  div {
+    display: block;
+}
+
+
+.title {
+  font-size: 18px;
+}
+
+span.message {
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  color: #fff;
+  background: #00bd0e;
+  padding: 3px 6px;
+  margin-left: 20px;
+}
+
+
+
+
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+}
+
+tr.cart-item div {
+  display: inline;
+  margin: 4px;
+}
+
+
+
+tr.cart-item button {
+  background: transparent;
+  border: none;
+}
+
+.w3-green, .w3-hover-green:hover{
+  color: #fff!important;
+    background-color: #4CAF50!important;
+}
+.w3-badge {
+  border-radius: 50%;
+}
+.w3-btn, .w3-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.w3-white, .w3-hover-white:hover {
+  color: #000!important;
+  background-color: #fff!important;
+}
+.w3-margin-left {
+  margin-left: 16px!important;
+}
